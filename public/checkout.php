@@ -1,5 +1,7 @@
 <?php
 
+
+
 require '../vendor/autoload.php';
 
 use app\library\Cart;
@@ -30,7 +32,7 @@ foreach ($productsInCart as $product) {
         'price_data' => [
             'currency' => 'brl',
             'product_data' => [
-                'name' => $product->getName()
+                'name' => ucfirst($product->getName())
             ],
             'unit_amount' => $product->getPrice() * 100
         ],

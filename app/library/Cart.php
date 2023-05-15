@@ -5,6 +5,9 @@ namespace app\library;
 class Cart
 {
 
+  /**
+   * adiciona produtos ao carrinho de compra
+   **/
   public function add(Product $product)
   {
 
@@ -28,7 +31,9 @@ class Cart
       $this->setProductsInCart($product);
     }
   }
-
+  /**
+   * define todos os produtos no carrinho de compras
+   **/
   private function setProductsInCart($product)
   {
     if (!isset($_SESSION['cart']['products'])) {
@@ -37,6 +42,9 @@ class Cart
     $_SESSION['cart']['products'][]  = $product;
   }
 
+  /**
+   * define valor total  dos produtos no carrinho de compras
+   **/
   private function setTotal(Product $product)
   {
     if (!isset($_SESSION['cart']['total'])) {
@@ -46,6 +54,9 @@ class Cart
     $_SESSION['cart']['total'] += $product->getPrice() * $product->getQuantity();
   }
 
+  /**
+   * remove produtos ao carrinho de compra
+   **/
   public function remove(int $id)
   {
     if (isset($_SESSION['cart']['products'])) {
@@ -58,11 +69,17 @@ class Cart
     }
   }
 
+  /**
+   * retorna dados do carrinho de compra
+   **/
   public function getCart()
   {
     return $_SESSION['cart']['products'] ?? [];
   }
 
+  /**
+   * retorna o valor total do carrinho de compras
+   **/
   public function getTotal()
   {
     return $_SESSION['cart']['total'] ?? 0;
