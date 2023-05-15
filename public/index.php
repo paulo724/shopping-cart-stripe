@@ -9,8 +9,8 @@
   <title>Página de compras</title>
 
 
+  <!-- Styles custom do template -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
   <link href="assets/css/style.css" rel="stylesheet">
 
   <?php
@@ -54,7 +54,7 @@
           <h1 class="fw-light">Loja de compras</h1>
           <p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
           <p>
-            <a href="mycart.php" class="btn btn-primary my-2">Ir para o carrinho</a>
+            <a href="mycart.php" class="btn btn-primary my-2">Ir para o carrinho <span class="badge text-bg-secondary"><?php echo count($_SESSION['cart']['products']); ?></span></a>
           </p>
         </div>
       </div>
@@ -92,6 +92,7 @@
 
   </main>
 
+  <!-- Scripts bootstrap -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 
 </body>
