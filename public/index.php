@@ -8,10 +8,10 @@ require '../vendor/autoload.php';
 session_start();
 
 $products = [
-  1 => ['id' => 1, 'name' => 'geladeira', 'price' => 1000, 'quantity' => 1],
-  2 => ['id' => 2, 'name' => 'mouse', 'price' => 100, 'quantity' => 1],
-  3 => ['id' => 3, 'name' => 'teclado', 'price' => 10, 'quantity' => 1],
-  4 => ['id' => 4, 'name' => 'monitor', 'price' => 5000, 'quantity' => 1],
+  1 => ['id' => 1, 'name' => 'geladeira', 'price' => 1000.00, 'quantity' => 1],
+  2 => ['id' => 2, 'name' => 'mouse', 'price' => 100.00, 'quantity' => 1],
+  3 => ['id' => 3, 'name' => 'teclado', 'price' => 10.00, 'quantity' => 1],
+  4 => ['id' => 4, 'name' => 'monitor', 'price' => 5000.00, 'quantity' => 1],
 ];
 
 
